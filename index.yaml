@@ -32,6 +32,6 @@ entries:
     - https://github.com/bitnami/bitnami-docker-elasticsearch
     - https://www.elastic.co/products/elasticsearch
     urls:
-    - https://github.com/HedwigOrieba/mantrahelmcharts.git/charts/elasticsearch-17.9.25.tgz
+    - https://hedwigorieba.github.io/mantrahelmcharts/charts/elasticsearch-17.9.25.tgz
     version: 17.9.25
 generated: "2024-11-04T17:07:37.8158243+03:00"
