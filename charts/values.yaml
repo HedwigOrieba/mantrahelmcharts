@@ -725,13 +725,20 @@ coordinating:
   ## @param coordinating.livenessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ## @param coordinating.livenessProbe.successThreshold Minimum consecutive successes for the probe to be considered successful after having failed (coordinating-only nodes pod)
   ##
+  # livenessProbe:
+  #   enabled: true
+  #   initialDelaySeconds: 90
+  #   periodSeconds: 10
+  #   timeoutSeconds: 5
+  #   successThreshold: 1
+  #   failureThreshold: 5
   livenessProbe:
     enabled: true
-    initialDelaySeconds: 90
-    periodSeconds: 10
-    timeoutSeconds: 5
+    initialDelaySeconds: 360
+    periodSeconds: 60
+    timeoutSeconds: 30
     successThreshold: 1
-    failureThreshold: 5
+    failureThreshold: 80
   ## Elasticsearch coordinating-only container's readiness probe
   ## ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
   ## @param coordinating.readinessProbe.enabled Enable/disable the readiness probe (coordinating-only nodes pod)
@@ -741,13 +748,20 @@ coordinating:
   ## @param coordinating.readinessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ## @param coordinating.readinessProbe.successThreshold Minimum consecutive successes for the probe to be considered successful after having failed (coordinating-only nodes pod)
   ##
+  # readinessProbe:
+  #   enabled: true
+  #   initialDelaySeconds: 90
+  #   periodSeconds: 10
+  #   timeoutSeconds: 5
+  #   successThreshold: 1
+  #   failureThreshold: 5
   readinessProbe:
     enabled: true
-    initialDelaySeconds: 90
-    periodSeconds: 10
-    timeoutSeconds: 5
+    initialDelaySeconds: 360
+    periodSeconds: 60
+    timeoutSeconds: 30
     successThreshold: 1
-    failureThreshold: 5
+    failureThreshold: 80
   ## @param coordinating.customStartupProbe Override default startup probe
   ##
   customStartupProbe: {}
@@ -969,13 +983,20 @@ data:
   ## @param data.livenessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ## @param data.livenessProbe.successThreshold Minimum consecutive successes for the probe to be considered successful after having failed (data nodes pod)
   ##
+  # livenessProbe:
+  #   enabled: true
+  #   initialDelaySeconds: 90
+  #   periodSeconds: 10
+  #   timeoutSeconds: 5
+  #   successThreshold: 1
+  #   failureThreshold: 5
   livenessProbe:
     enabled: true
-    initialDelaySeconds: 90
-    periodSeconds: 10
-    timeoutSeconds: 5
+    initialDelaySeconds: 360
+    periodSeconds: 60
+    timeoutSeconds: 30
     successThreshold: 1
-    failureThreshold: 5
+    failureThreshold: 80
   ## Elasticsearch data container's readiness probe
   ## ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
   ## @param data.readinessProbe.enabled Enable/disable the readiness probe (data nodes pod)
@@ -985,13 +1006,20 @@ data:
   ## @param data.readinessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ## @param data.readinessProbe.successThreshold Minimum consecutive successes for the probe to be considered successful after having failed (data nodes pod)
   ##
+  # readinessProbe:
+  #   enabled: true
+  #   initialDelaySeconds: 90
+  #   periodSeconds: 10
+  #   timeoutSeconds: 5
+  #   successThreshold: 1
+  #   failureThreshold: 5
   readinessProbe:
     enabled: true
-    initialDelaySeconds: 90
-    periodSeconds: 10
-    timeoutSeconds: 5
+    initialDelaySeconds: 360
+    periodSeconds: 60
+    timeoutSeconds: 30
     successThreshold: 1
-    failureThreshold: 5
+    failureThreshold: 80
   ## @param data.customStartupProbe Override default startup probe
   ##
   customStartupProbe: {}
@@ -1234,13 +1262,20 @@ ingest:
   ## @param ingest.livenessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ## @param ingest.livenessProbe.successThreshold Minimum consecutive successes for the probe to be considered successful after having failed (ingest nodes pod)
   ##
+  # livenessProbe:
+  #   enabled: true
+  #   initialDelaySeconds: 90
+  #   periodSeconds: 10
+  #   timeoutSeconds: 5
+  #   successThreshold: 1
+  #   failureThreshold: 5
   livenessProbe:
     enabled: true
-    initialDelaySeconds: 90
-    periodSeconds: 10
-    timeoutSeconds: 5
+    initialDelaySeconds: 360
+    periodSeconds: 60
+    timeoutSeconds: 30
     successThreshold: 1
-    failureThreshold: 5
+    failureThreshold: 80
   ## Elasticsearch ingest container's readiness probe
   ## ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
   ## @param ingest.readinessProbe.enabled Enable/disable the readiness probe (ingest nodes pod)
@@ -1250,13 +1285,20 @@ ingest:
   ## @param ingest.readinessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ## @param ingest.readinessProbe.successThreshold Minimum consecutive successes for the probe to be considered successful after having failed (ingest nodes pod)
   ##
+  # readinessProbe:
+  #   enabled: true
+  #   initialDelaySeconds: 90
+  #   periodSeconds: 10
+  #   timeoutSeconds: 5
+  #   successThreshold: 1
+  #   failureThreshold: 5
   readinessProbe:
     enabled: true
-    initialDelaySeconds: 90
-    periodSeconds: 10
-    timeoutSeconds: 5
+    initialDelaySeconds: 360
+    periodSeconds: 60
+    timeoutSeconds: 30
     successThreshold: 1
-    failureThreshold: 5
+    failureThreshold: 80
   ## @param ingest.customStartupProbe Override default startup probe
   ##
   customStartupProbe: {}
