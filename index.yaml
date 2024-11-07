@@ -5,7 +5,7 @@ entries:
       category: Analytics
     apiVersion: v2
     appVersion: 7.17.2
-    created: "2024-11-06T15:15:06.1889171+03:00"
+    created: "2024-11-07T12:42:09.0372287+03:00"
     dependencies:
     - condition: global.kibanaEnabled
       name: kibana
@@ -19,7 +19,7 @@ entries:
     description: Elasticsearch is a distributed search and analytics engine. It is
       used for web search, log monitoring, and real-time analytics. Ideal for Big
       Data applications.
-    digest: d409c49c120aae89115d0a0a0f12735e1a5ca8a31a68505e47b72bb8c3dd9406
+    digest: 720dd42e1d6fbf4ba9ee2a94d4cb8a787c99df2a8822e9a9c56e76832974bd28
     home: https://github.com/bitnami/charts/tree/master/bitnami/elasticsearch
     icon: https://bitnami.com/assets/stacks/elasticsearch/img/elasticsearch-stack-220x234.png
     keywords:
@@ -32,6 +32,6 @@ entries:
     - https://github.com/bitnami/bitnami-docker-elasticsearch
     - https://www.elastic.co/products/elasticsearch
     urls:
-    - https://hedwigorieba.github.io/mantrahelmcharts/charts/elasticsearch-17.9.25.tgz
+    - https://github.com/HedwigOrieba/mantrahelmcharts.git/elasticsearch-17.9.25.tgz
     version: 17.9.25
-generated: "2024-11-06T15:15:06.1808701+03:00"
+generated: "2024-11-07T12:42:09.0273592+03:00"

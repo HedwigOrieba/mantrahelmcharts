@@ -235,7 +235,7 @@ master:
   ## https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-discovery-voting.html#_even_numbers_of_master_eligible_nodes
   ## https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-discovery-quorums.html#modules-discovery-quorums
   ##
-  replicas: 3
+  replicas: 1
   ## Update strategy for ElasticSearch master statefulset
   ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#update-strategies
   ## @param master.updateStrategy.type Update strategy for Master statefulset
@@ -378,11 +378,11 @@ master:
   ##
   livenessProbe:
     enabled: true
-    initialDelaySeconds: 90
-    periodSeconds: 10
-    timeoutSeconds: 5
+    initialDelaySeconds: 360
+    periodSeconds: 60
+    timeoutSeconds: 30
     successThreshold: 1
-    failureThreshold: 5
+    failureThreshold: 80
   ## Elasticsearch master-eligible container's readiness probe
   ## ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
   ## @param master.readinessProbe.enabled Enable/disable the readiness probe (master-eligible nodes pod)
@@ -394,11 +394,11 @@ master:
   ##
   readinessProbe:
     enabled: true
-    initialDelaySeconds: 90
-    periodSeconds: 10
-    timeoutSeconds: 5
+    initialDelaySeconds: 360
+    periodSeconds: 60
+    timeoutSeconds: 30
     successThreshold: 1
-    failureThreshold: 5
+    failureThreshold: 80
   ## @param master.customStartupProbe Override default startup probe
   ##
   customStartupProbe: {}
